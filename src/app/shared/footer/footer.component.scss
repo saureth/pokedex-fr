@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    background-color: white;
+    border: solid gray 5px;
+    border-radius: 0 0 10px 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+p {
+    margin: 0;
+    text-align: center;
+}
+img {
+    width: 40px;
+    height: 40px;
+}
+
+.buttons {
+    display: flex;
+    flex-flow: row wrap;
+}
+.btn {
+    width: 50%;
+    margin-bottom: 10px;   
+    margin-top: 10px;     
+    display: flex;
+    flex-flow: row ;
+    justify-content: center;
+}
