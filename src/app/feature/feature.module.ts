@@ -1,18 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PokedexComponent } from './pokedex/pokedex.component';
 import { SharedModule } from '../shared/shared.module';
-import { HeaderComponent } from '../shared/header/header.component';
-
-
+import { MainPanelComponent } from './main-panel/main-panel.component';
+import { FeatureRoutingModule } from './feature-routing.module';
 
 @NgModule({
   declarations: [
-    PokedexComponent,
-    HeaderComponent
+    MainPanelComponent
   ],
   imports: [
     CommonModule,
+    FeatureRoutingModule,
     SharedModule
   ]
 })
