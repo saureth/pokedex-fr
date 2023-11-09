@@ -9,6 +9,12 @@
     max-width: 600px;
 }
 .main-panel {
-    height: 50px;
-    background-color: blue;
+    border: solid gray 5px;
+    background-color: darkgray;
+}
+
+.main-panel h2 {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
 }
