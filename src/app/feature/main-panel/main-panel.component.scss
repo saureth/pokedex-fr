@@ -23,10 +23,10 @@
     }
 
     .main-panel h2 {
-        width: 100%;
         background-color: white;
         border-radius: 10px;
         text-align: center;
+        width: 100%;
     }
 
     .main-panel img {
@@ -35,6 +35,10 @@
     }
 
     section div {
+        align-content: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
         width: 100%;
     }
 }
