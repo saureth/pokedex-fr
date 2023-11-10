@@ -48,34 +48,32 @@
         margin: 5%;
     }
     .panel-parent{
-        width: 90%;
         margin: 5px;
     }
     .main-panel {
         border: solid gray 5px;
-        background-color: darkgray;
+        background-color: darkgray;    
+        min-height: 400px;
     }
     .main-panel section {
-        margin: 10px;
         display: flex;
         flex-flow: row wrap;
-        align-items: start;
+        align-items: center;
+        min-height: 400px;    
     }
-    .main-panel h2 {
-        width: 80%;
+    .main-panel h2 {        
+        width: 90%;
         background-color: white;
         border-radius: 10px;
         text-align: center;
     }
     .main-panel img {
-        width: 100px;
-        height: 100px;
-        margin: 0 auto;
+        width: 90%;
+        height: 90%;
     }
     section div {
         width: 50%;
         display: flex;
         flex-flow: column wrap;
-        align-content: center;
     }
 }
