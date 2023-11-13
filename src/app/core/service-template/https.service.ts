@@ -13,7 +13,7 @@ export class HttpsService {
 
   getPokemon (base: string = this.POKEMON_ENV, pokemon: string = this.DEFAULT_PKM) {
     let finalUrl = base.concat(pokemon);
-    this.http.get(finalUrl);
+    return this.http.get(finalUrl);
   }
 
 }
