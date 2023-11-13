@@ -1,38 +1,79 @@
-.container{
-    display: flex;
-    flex-flow: column wrap;
-    align-content: center;
-}
-.panel-parent{
-    width: 90%;
-    margin: 5px;
-    max-width: 600px;
-}
-.main-panel {
-    border: solid gray 5px;
-    background-color: darkgray;
+@media screen and (max-width: 600px) { 
+    .container{
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+    }
+    .panel-parent{
+        width: 90%;
+        margin: 5px;
+        max-width: 600px;
+    }
+    .main-panel {
+        border: solid gray 5px;
+        background-color: darkgray;
+    }
+
+    .main-panel section {
+        margin: 10px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-panel h2 {
+        background-color: white;
+        border-radius: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .main-panel img {
+        width: 100px;
+        height: 100px;
+    }
+
+    section div {
+        align-content: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 100%;
+    }
 }
 
-.main-panel section {
-    margin: 10px;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.main-panel h2 {
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.main-panel img {
-    width: 100px;
-    height: 100px;
-}
-
-section div {
-    width: 100%;
+@media screen and (min-width: 601px) { 
+    .container{
+        margin: 5%;
+    }
+    .panel-parent{
+        margin: 5px;
+    }
+    .main-panel {
+        border: solid gray 5px;
+        background-color: darkgray;    
+        min-height: 400px;
+    }
+    .main-panel section {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        min-height: 400px;    
+    }
+    .main-panel h2 {        
+        width: 90%;
+        background-color: white;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .main-panel img {
+        width: 90%;
+        height: 90%;
+    }
+    section div {
+        width: 50%;
+        display: flex;
+        flex-flow: column wrap;
+    }
 }
