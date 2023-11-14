@@ -10,6 +10,10 @@ export class PokemonInfoComponent {
 
   constructor(private pokeService: HttpsService){}
 
+  ngOnInit(){
+    this.getPokemon();
+  }
+
   getPokemon(idOrName?: string){
     this.pokeService.getPokemon(idOrName)
       .subscribe(pokemon => {
