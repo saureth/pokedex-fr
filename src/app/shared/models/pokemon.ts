@@ -6,7 +6,7 @@ export class Pokemon {
       public ability: string = "STRINGVAL",
       public height: string = "NUMERICVAL",
       public weight: string= "NUMERICVAL",
-      public imgUrl: string= "STRINGVAL",
+      public imgUrl: string= "assets/pokeball.png",
       public level: string = "1",
     ) {}
 
