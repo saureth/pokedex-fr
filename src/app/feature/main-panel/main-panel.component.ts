@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpsService } from 'src/app/core/service-template/https.service';
 import { Pokemon } from 'src/app/shared/models/pokemon';
+import { CalculateRelatedById } from 'src/app/shared/utils/calculate-related';
 
 @Component({
   selector: 'app-main-panel',
@@ -10,6 +11,8 @@ import { Pokemon } from 'src/app/shared/models/pokemon';
 export class MainPanelComponent {
 
   currPokemon: Pokemon = new Pokemon();
+  relatedIds: any = null;
+  
   constructor(private pokeService: HttpsService){}
 
   ngOnInit(){
@@ -34,5 +37,12 @@ export class MainPanelComponent {
       pokemon.weight,
       pokemon.sprites["front_default"]
     );
+    this.setRelated();
   }
+
+  setRelated(){
+    this.relatedIds = CalculateRelatedById(Number(this.currPokemon.id));
+  }
+
+  
 }
