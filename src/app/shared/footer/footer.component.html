@@ -3,16 +3,20 @@
         <p>OTHERS</p>
         <section class="buttons">
             <div class="btn">
-                <img src="assets/pokeball.png" alt="pokeball icon">
+                <img *ngIf="!this.relatedUrls" src={{default}} alt="pokeball icon">
+                <img *ngIf="!!this.relatedUrls" src={{this.relatedUrls.one}} alt="pokeball icon">
             </div>
             <div class="btn">
-                <img src="assets/pokeball.png" alt="pokeball icon">
+                <img *ngIf="!this.relatedUrls" src={{default}} alt="pokeball icon">
+                <img *ngIf="!!this.relatedUrls" src={{this.relatedUrls.two}} alt="pokeball icon">
             </div>
             <div class="btn">
-                <img src="assets/pokeball.png" alt="pokeball icon">
+                <img *ngIf="!this.relatedUrls" src={{default}} alt="pokeball icon">
+                <img *ngIf="!!this.relatedUrls" src={{this.relatedUrls.three}} alt="pokeball icon">
             </div>
             <div class="btn">
-                <img src="assets/pokeball.png" alt="pokeball icon">
+                <img *ngIf="!this.relatedUrls" src={{default}} alt="pokeball icon">
+                <img *ngIf="!!this.relatedUrls" src={{this.relatedUrls.four}} alt="pokeball icon">
             </div>
         </section>
     </article>
