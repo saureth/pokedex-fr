@@ -12,6 +12,7 @@ export class MainPanelComponent {
 
   currPokemon: Pokemon = new Pokemon();
   relatedIds: any = null;
+  relatedUrls: any = null;
   
   constructor(private pokeService: HttpsService){}
 
@@ -42,6 +43,17 @@ export class MainPanelComponent {
 
   setRelated(){
     this.relatedIds = CalculateRelatedById(Number(this.currPokemon.id));
+    this.pokeService.forkPokemon(this.relatedIds)
+      .subscribe({
+        next: (results: any) => {
+          this.relatedUrls = {
+            one: results[0].sprites.front_default,
+            two: results[1].sprites.front_default,
+            three: results[2].sprites.front_default,
+            four: results[3].sprites.front_default
+          };
+        }
+    })
   }
 
   
