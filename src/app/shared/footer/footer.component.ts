@@ -7,6 +7,12 @@ import { Pokemon } from '../models/pokemon';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  @Input() relatedIds = {};  
+  @Input() relatedUrls = {
+    one: "",
+    two: "",
+    three: "",
+    four: ""
+  };
+  default: string = "assets/pokeball.png";
 
 }
