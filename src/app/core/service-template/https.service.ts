@@ -13,27 +13,18 @@ export class HttpsService {
 
   constructor(private http: HttpClient) { }
 
-  getPokemon (base: string = this.POKEMON_ENV, pokemon: string = this.DEFAULT_PKM) {
-    let finalUrl = base.concat(pokemon);
+  getPokemon (pokemon: string = this.DEFAULT_PKM) {
+    let finalUrl = this.POKEMON_ENV.concat(pokemon);
     return this.http.get(finalUrl);
   }
 
-  forkPokemon(base: string = this.POKEMON_ENV, pokemons: any){
-    forkJoin([
-      this.getPokemon(base,pokemons.one),
-      this.getPokemon(base,pokemons.two),
-      this.getPokemon(base,pokemons.three),
-      this.getPokemon(base,pokemons.four)
-    ]).subscribe({
-      next: (results) => {
-        this.related = {
-          one: results[0],
-          two: results[1],
-          three: results[2],
-          four: results[3]
-        };
-      }
-    })
+  forkPokemon(pokemons: any){
+    return forkJoin([
+      this.getPokemon(pokemons.one),
+      this.getPokemon(pokemons.two),
+      this.getPokemon(pokemons.three),
+      this.getPokemon(pokemons.four)
+    ]);
   }
 
 }
